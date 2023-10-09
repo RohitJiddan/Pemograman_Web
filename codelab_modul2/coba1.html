@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Operasi Penjumlahan</title>
+  </head>
+  <body>
+    <h1>PENJUMLAHAN BILANGAN</h1>
+
+    <form>
+      <label for="bilangan1">Bilangan Pertama :</label>
+      <input type="number" id="bilangan1" name="bilangan1" required />
+
+      <label for="bilangan2">Bilangan Kedua :</label>
+      <input
+        type="number"
+        id="bilangan2"
+        name="bilangan2"
+        required
+      /><br /><br />
+
+      <input type="button" value="Jumlahkan" onclick="hitungPenjumlahan()" />
+      <input type="button" value="Ulang" onclick="resetBilangan()" />
+    </form>
+
+    <script>
+      function hitungPenjumlahan() {
+        var bilangan1 = document.getElementById("bilangan1").value;
+        var bilangan2 = document.getElementById("bilangan2").value;
+
+        var hasil = parseInt(bilangan1) + parseInt(bilangan2);
+        alert("hasil penjumlahan = " + hasil);
+      }
+      function resetBilangan() {
+        document.getElementById("bilangan1").value = "";
+        document.getElementById("bilangan2").value = "";
+      }
+    </script>
+  </body>
+</html>
